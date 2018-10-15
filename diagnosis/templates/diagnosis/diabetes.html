@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+    <head>
+        <title>Diabetic Retinopathy</title>
+    </head>
+{% block content %}
+
+<div class="container">
+    <h1>Fill in the requirements</h1>
+    <form name="retina" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class='btn btn-default' value="Submit">
+    </form>
+</div>
+
+{% endblock %}

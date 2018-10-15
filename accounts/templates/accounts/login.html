@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+    <head>
+        <title>Login - Health Portal</title>
+    </head>
+{% block content %}
+
+<div class="container">
+    <h1>Log In</h1>
+    <form name="signup" method="post">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <input type="submit" class='btn btn-default' value="Login">
+    </form>
+</div>
+
+{% endblock %}
