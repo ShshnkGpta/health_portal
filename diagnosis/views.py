@@ -11,7 +11,7 @@ from .models import Retina
 
 
 # Create your views here.
-"""def diabetes(request):
+def diabetes(request):
 
     form = NewRetinaForm()
 
@@ -24,10 +24,10 @@ from .models import Retina
         else:
             print("Error!")
         
-    return render(request,'diagno')"""
+    return render(request,'diagnonis/diabetes.html')
 
 class Diagnosis(CreateView):
-    template_name = 'diagnosis/diagnosis.html'
+    template_name = 'diagnosis/disease.html'
 
 class NewRetina(CreateView):
     model = Retina
