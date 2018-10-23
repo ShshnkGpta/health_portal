@@ -1,14 +1,17 @@
 from django.shortcuts import render
+from django.views.generic import CreateView
 
-# Create your views here.
+#
 from django.contrib.auth.mixins import (LoginRequiredMixin, PermissionRequiredMixin)
-
 from django.urls import reverse
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from diagnosis.retina_form import NewRetinaForm
+from .models import Retina
+#from . import retina-form
 
-def diabetes(request):
+
+# Create your views here.
+"""def diabetes(request):
 
     form = NewRetinaForm()
 
@@ -21,7 +24,10 @@ def diabetes(request):
         else:
             print("Error!")
         
-    return render(request,'diagno')
+    return render(request,'diagno')"""
+
+class Diagnosis(CreateView):
+    template_name = 'diagnosis/diagnosis.html'
 
 class NewRetina(CreateView):
     model = Retina

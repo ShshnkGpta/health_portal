@@ -7,10 +7,10 @@
 
 <div class="container">
     <h1>Fill in the requirements</h1>
-    <form name="retina" method="POST">
+    <form name="retina" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" class='btn btn-default' value="Submit">
+        {% include 'diagnosis/from-template.html' %}
+        <button type="submit" class='btn btn-default'>Submit</button>
     </form>
 </div>
 
