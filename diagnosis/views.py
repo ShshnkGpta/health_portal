@@ -37,9 +37,6 @@ def retina_form_view(request):
         
     return render(request,'diagnonis/diabetes.html', {'form':retina_form})
 
-def lala(request):
-    return render(request,'diagnosis/lala.html')
-
 def test(request):
 
     form = RetinaForm2()

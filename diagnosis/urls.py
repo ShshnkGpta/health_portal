@@ -6,17 +6,13 @@ from . import views
 app_name = 'diagnosis'
 
 urlpatterns = [
-    url('',
+    url('diseases/',
         views.diagnosis,
         name='diagnosis'),
 
     url('diabetes/',
         views.retina_form_view,
         name='diabetes'),
-
-    url('lala/',
-        views.lala,
-        name='lala'),
 
     url('test/',
         views.test,
