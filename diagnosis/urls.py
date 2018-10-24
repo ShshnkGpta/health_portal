@@ -13,8 +13,4 @@ urlpatterns = [
     url('diabetes/',
         views.retina_form_view,
         name='diabetes'),
-
-    url('test/',
-        views.test,
-        name='test')
 ]

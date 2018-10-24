@@ -22,7 +22,7 @@ def diagnosis(request):
     template_name = 'diagnosis/disease.html'
 """
 
-def retina_form_view(request):
+"""def retina_form_view(request):
 
     form = forms.RetinaForm()
 
@@ -36,13 +36,14 @@ def retina_form_view(request):
             print("Error!")
         
     return render(request,'diagnonis/diabetes.html', {'form':retina_form})
+"""
 
-def test(request):
+def retina_form_view(request):
 
-    form = RetinaForm2()
+    form = forms.RetinaForm()
 
     if request.method == 'POST':
-        form = RetinaForm2(request.POST)
+        form = forms.RetinaForm(request.POST)
 
         if form.is_valid():
             form.save(commit = True)
