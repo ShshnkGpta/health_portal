@@ -3,10 +3,8 @@
 {% block content %}
 <h3>Choose among the following list of diseases to proceed:</h3><br><br>
 
-        <button  class='btn btn-default'>
-                <a href="{% url 'diagnosis:diabetes' %}">
-                    Diabetes
-                </a>
-        </button>
+        <a class='btn btn-danger btn-lg' href="{% url 'diagnosis:diabetes' %}" role="button">
+                Diabetes
+        </a>
 
 {% endblock %}

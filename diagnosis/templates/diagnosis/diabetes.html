@@ -5,16 +5,17 @@
     </head>
 {% block content %}
 
-<div class="container">
-    <h1>Fill in the requirements</h1>
+<h1>Fill in the requirements</h1><br><br>
+
+<div class="form-group">
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class='btn btn-primary'>Submit</button>
+        <button type="submit" class='btn btn-success'>Submit</button>
     </form>
-    <div>
-        <!--<img src="{{ retina.retina_scan }}">-->
-    </div>
+</div>
+<div class="container">
+    <!--<img src="{{ retina.retina_scan.url }}" class='img-responsive'>-->
 </div>
 
 {% endblock %}
